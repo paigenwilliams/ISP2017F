@@ -17,7 +17,7 @@ Population::Population(int np)
 void Population::number_immune()  {
   int i = 0;
   int immune;
-  cout << "Please enter the number of people immune: " << endl;
+  cout << "Please enter the number of people immune: ";
   cin >> immune;
   while (i < immune)  {
     int x = rand()%npeople;
