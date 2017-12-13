@@ -22,7 +22,7 @@ n = Joe.update();
     n = Joe.infect(5);
   }
 
-  step = Joe.set_step(step++);
+  step = Joe.set_step(step = step + 1);
 
   if (n == 0)  {
     cout << "On day " << step << ", Joe is " << Joe.status_string() << endl;
