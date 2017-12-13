@@ -12,14 +12,16 @@ Population population;
 Person Joe;
 int npeople = 10;
 int step = 0;
-population.set_population(npeople);
-
+population.set_population(npeople);    
+    
 while (!population.is_pop_stable())  {
 
-    float bad_luck = (float) rand()/(float)RAND_MAX;
-    if (bad_luck>.95) {
-      population.random_infection();
-    }
+population.pop_update();
+    
+  float bad_luck = (float) rand()/(float)RAND_MAX;
+  if (bad_luck>.95) {
+    population.random_infection();
+  }
 
   cout << "In step " << step << ", # sick: " << population.count_infected() << " : ";
 
