@@ -86,6 +86,7 @@ void Population::people_met(float probability)  {
   cin >> pm;
   
   for (int i = 0;i < pm;i++)  {
+    duplicate = true;
     while (duplicate)  {
       x[i] = rand()%npeople;
         if (i == 0)  {
@@ -94,6 +95,7 @@ void Population::people_met(float probability)  {
         for (int j = i - 1;j > -1;j--)  {
           if (x[i] == x[j])  {
             duplicate = true;
+            break;
           }
           if (j == 0 && x[i] != x[j])  {
             duplicate = false;
