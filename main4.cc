@@ -15,14 +15,14 @@ float probability = population.set_probability_of_transfer();
 population.set_population(npeople);
 population.number_immune();
 
-while (step < 10)  {
+while (!population.is_pop_stable())  {
 
 population.pop_update();
 
-    float bad_luck = (float) rand()/(float)RAND_MAX;
-    if (bad_luck>.5) {
-      population.random_infection();
-    }
+  float bad_luck = (float) rand()/(float)RAND_MAX;
+  if (bad_luck>.95) {
+    population.random_infection();
+  }
 
   population.transfer(probability);
 
