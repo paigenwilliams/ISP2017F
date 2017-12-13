@@ -76,15 +76,38 @@ bool Population::is_pop_stable()  {
 };
 
 
+
 void Population::people_met(float probability)  {
   int pm;
-  int x;
+  float prob;
+  vector<int> x(npeople);
+  bool duplicate = true;
   cout << "Please enter the number of people met: ";
   cin >> pm;
+  
   for (int i = 0;i < pm;i++)  {
-    x = rand()%npeople;
-    contagion(probability);
+    while (duplicate)  {
+      x[i] = rand()%npeople;
+        if (i == 0)  {
+          duplicate = false;
+        }  else  {
+        for (int j = i - 1;j > -1;j--)  {
+          if (x[i] == x[j])  {
+            duplicate = true;
+          }
+          if (j == 0 && x[i] != x[j])  {
+            duplicate = false;
+          }
+        }
+      }
+
+      prob = rand()/(float)RAND_MAX;
+      if (prob < probability && People[x[i]].get_status() == 0)  {
+        People[x[i]].infect(5);
+      }
+    }
   }
+
 };
 
 
