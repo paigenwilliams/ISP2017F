@@ -11,7 +11,6 @@ Population population(100);
 Person Joe;
 int step = 0;
 float probability = population.set_probability_of_transfer();
-population.set_population(npeople);
 population.number_immune();
 population.people_met(probability);
 
