@@ -68,9 +68,9 @@ bool Population::is_pop_stable()  {
     if (!People[i].is_stable())  {
       return false;
         break;
-      if (i = npeople+1)  {
-        return true;
-      }
+    }
+    if (i = npeople+1)  {
+      return true;
     }
   }
 };
