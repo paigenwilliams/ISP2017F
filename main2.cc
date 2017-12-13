@@ -8,11 +8,9 @@ using namespace std;
 
 int main()  {
 
-Population population;
+Population population(100);
 Person Joe;
-int npeople = 10;
-int step = 0;
-population.set_population(npeople);    
+int step = 0; 
     
 while (!population.is_pop_stable())  {
 
