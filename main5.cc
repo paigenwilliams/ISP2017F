@@ -21,10 +21,10 @@ while (!population.is_pop_stable())  {
 
 population.pop_update();
 
-    float bad_luck = (float) rand()/(float)RAND_MAX;
-    if (bad_luck>.5) {
-      population.random_infection();
-    }
+  float bad_luck = (float) rand()/(float)RAND_MAX;
+  if (bad_luck>.5) {
+    population.random_infection();
+  }
 
   cout << "In step " << step << ", # sick: " << population.count_infected() << " : ";
 
