@@ -58,7 +58,7 @@ int Person::update()  {
 int Person::infect(int newn)  {
   if (status_int == 0)  {
     n = newn;
-    status_int = -1;
+    status_int = n;
   }
   return n;
 };
