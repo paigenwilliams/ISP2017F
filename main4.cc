@@ -7,9 +7,8 @@ using namespace std;
 
 int main()  {
 
-Population population;
+Population population(100);
 Person Joe;
-int npeople = 10;
 int step = 0;
 float probability = population.set_probability_of_transfer();
 population.set_population(npeople);
