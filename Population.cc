@@ -7,6 +7,10 @@ using namespace std;
 
 Population::Population(int np)
   : npeople(np) {
+  for (int i = 0;i < np;i++)  {
+    People.push_back(Person());
+    People[i].set_status(0);
+  }
 };
 
 
@@ -21,14 +25,6 @@ void Population::number_immune()  {
       People[x].set_status(-2);
       i++;
     }
-  }
-};
-
-
-void Population::set_population(int np)  {
-  for (int i = 0;i < np;i++)  {
-    People.push_back(Person());
-    People[i].set_status(0);
   }
 };
 
