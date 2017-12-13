@@ -69,7 +69,7 @@ bool Population::is_pop_stable()  {
       return false;
         break;
     }
-    if (i = npeople+1)  {
+    if (i == npeople+1)  {
       return true;
     }
   }
@@ -81,7 +81,7 @@ void Population::people_met(float probability)  {
   int pm;
   float prob;
   vector<int> x(npeople);
-  bool duplicate = true;
+  bool duplicate;
   cout << "Please enter the number of people met: ";
   cin >> pm;
   
