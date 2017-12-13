@@ -14,12 +14,12 @@ int n = 0;
     
 while (!Joe.is_stable())  {
 
-Joe.update();
+n = Joe.update();
 
     
   float bad_luck = (float) rand()/(float)RAND_MAX;
   if (bad_luck>.95) {
-    Joe.infect(5);
+    n = Joe.infect(5);
   }
 
   step = Joe.set_step(step++);
