@@ -37,8 +37,7 @@ public:
   float set_probability_of_transfer();
   void contagion(float probability);
   void number_immune();
-  Population(int np = 10);
-  void set_population(int np);
+  Population(int np);
   void print();
   int pop_update();
   void random_infection();
