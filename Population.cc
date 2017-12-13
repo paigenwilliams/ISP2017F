@@ -85,6 +85,7 @@ void Population::people_met(float probability)  {
   cout << "Please enter the number of people met: ";
   cin >> pm;
   
+for (int k = 0;k < npeople;k++)  {  
   for (int i = 0;i < pm;i++)  {
     duplicate = true;
     while (duplicate)  {
@@ -102,14 +103,22 @@ void Population::people_met(float probability)  {
           }
         }
       }
-
-      prob = rand()/(float)RAND_MAX;
-      if (prob < probability && People[x[i]].get_status() == 0)  {
-        People[x[i]].infect(5);
+      if (People[x[i]].get_status() == -1 && !People[x[i]].is_stable())  {
+        prob = rand()/(float)RAND_MAX;
+        if (prob < probability && People[x[i]].get_status() == 0)  {
+          People[k].infect(5);
       }
     }
   }
+      if (People[k].get_status() == -1 && !People[k].is_stable())  {
+        prob = rand()/(float)RAND_MAX;
+        if (prob < probability && People[x[i]].get_status() == 0)  {
+          People[x[i]].infect(5);
 
+        }
+      }
+    }
+  }
 };
 
 
