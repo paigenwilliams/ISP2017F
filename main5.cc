@@ -10,14 +10,17 @@ int main()  {
 Population population(100);
 Person Joe;
 int step = 0;
+int pm;
 float probability = population.set_probability_of_transfer();
 population.number_immune();
-population.people_met(probability);
+cout << "Please enter the number of people met per day: ";
+cin >> pm;
 
 
 while (!population.is_pop_stable())  {
 
 population.pop_update();
+population.people_met(probability, pm);
 
   float bad_luck = (float) rand()/(float)RAND_MAX;
   if (bad_luck>.5) {
