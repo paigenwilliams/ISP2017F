@@ -7,7 +7,7 @@ using namespace std;
 
 int main()  {
 
-Population population(100);
+Population population(10);
 Person Joe;
 int step = 0;
 int pm;
