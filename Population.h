@@ -35,13 +35,12 @@ private:
 public:
   void transfer(float probability);
   float set_probability_of_transfer();
-  void contagion(float probability);
   void number_immune();
   Population(int np);
   void print();
   int pop_update();
   void random_infection();
   int count_infected();
-  void people_met(float probability);
+  void people_met(float probability, int pm);
   bool is_pop_stable();
 };
