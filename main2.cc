@@ -8,18 +8,18 @@ using namespace std;
 
 int main()  {
 
-Population population(100);
+Population population(10);
 Person Joe;
 int step = 0; 
     
 while (!population.is_pop_stable())  {
 
-population.pop_update();
-    
   float bad_luck = (float) rand()/(float)RAND_MAX;
   if (bad_luck>.95) {
     population.random_infection();
   }
+
+  population.pop_update();
 
   cout << "In step " << step << ", # sick: " << population.count_infected() << " : ";
 

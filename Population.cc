@@ -31,7 +31,7 @@ void Population::number_immune()  {
 
 float Population::set_probability_of_transfer()  {
   float probability;
-  cout << "Please enter a probability: ";
+  cout << "Please enter a probability of transfer: ";
   cin >> probability;
   return probability;
 };
@@ -145,7 +145,7 @@ int Population::pop_update()  {
 
 void Population::random_infection()  {
     int value = rand()%(npeople + 1);
-    People[value].infect(5);
+    People[value].infect(6);
 };
 
 

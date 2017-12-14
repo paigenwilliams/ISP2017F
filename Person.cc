@@ -51,7 +51,7 @@ int Person::update()  {
       status_int = -1;
       n--;
     }
-  return status_int;
+  return n;
 };
 
 

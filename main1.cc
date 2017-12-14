@@ -27,7 +27,7 @@ n = Joe.update();
   if (n == 0)  {
     cout << "On day " << step << ", Joe is " << Joe.status_string() << endl;
   }  else  {
-    cout << "On day " << step << ", Joe is " << Joe.status_string() << " ( " << n << " to go)" << endl;
+    cout << "On day " << step << ", Joe is " << Joe.status_string() << " (" << n << " to go)" << endl;
   }
 
   }
